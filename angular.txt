@@ -1,0 +1,67 @@
+what is asynch pipe in angular?
+   The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. 
+   When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
+/////////////
+Async Pipe is an impure pipe that automatically subscribes to an observable to emit the latest values. 
+It not only subscribes to an observable, but it also subscribes to a promise and calls the then method. 
+When the components get destroyed, it automatically unsubscribes them to reduce memory leaks.
+advantages:
+
+1)Async Pipe makes the rendering of data from observable and promise easier.
+
+2)For promises, it automatically calls the then method.
+
+3)For observables, it automatically calls subscribe and unsubscribe.
+
+======================================================================================================================
+======================================================================================================================
+
+Differentiate between Observables and Promises?
+   Promises and Observables both handle the asynchronous call only.
+   A Promise can only handle one event, Observables are for streams of events over time
+Observable
+  1)Emits multiple values over a period of time
+
+ 2)Is not called until we subscribe to the Observable
+
+ 3)Can be canceled by using the unsubscribe() method
+
+ 4)Provides the map, forEach, filter, reduce, retry, and retryWhen operators
+
+  5)Lazy;
+
+promise
+ 1)Emits only a single value at a time
+
+ 2)Calls the services without .then and .catch
+
+ 3)Cannot be canceled
+
+ 4)Does not provide any operators
+
+  5)Not lazy;
+
+=============================================================
+========================================================
+  what is Routing?
+   if we want to navigate from one component to another component after user perfoming an action we will  use routing
+  without reloading the page  
+  when we create a new project we will get app-routing.module.ts in that we will get 
+  const routes:Routes=[
+  {path:"",redirectTo:'/',pathMatch:"full"}  ->if it is empty path it will redirect to here
+   {path:"",component:'/'},
+   {path:"**" component:'/'} ->this is called wildcard routing if the path is doesnot match any url it will goes here
+  ]
+==============================
+=====================================
+  What is RouterOutlet?
+  It is available in router package whaen we apply routeroutlet the view will be goes there
+
+===========================
+======================================
+   What is package.json vs angular.json?
+   package.json->The package. json is for versioning your app.means which version we are using in our project
+--------------------------
+  angular.json-> angular. json version property refers to the version of the Angular Workspace schema. means version dependencies
+------------------------------------------
+package.json: package.json contains the information about your web application .it  contains the info about the packages installed for the project and versions
